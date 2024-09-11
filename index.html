@@ -16,5 +16,19 @@
         <option value="Australia/Sydney">Sydney 🇦🇺</option>
       </select>
     </p>
+    <script>
+      function showDate(event) {
+        if (event.target.value.length > 0) {
+          let currentDate = moment()
+            .tz(event.target.value)
+            .format("dddd, MMMM D, YYYY h:mm A");
+
+          alert(`It is ${currentDate} in ${event.target.value}`);
+        }
+      }
+
+      let cityElement = document.querySelector("#cities");
+      cityElement.addEventListener("change", showDate);
+    </script>
   </body>
 </html>
