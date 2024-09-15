@@ -3,32 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.45/moment-timezone-with-data-1970-2030.min.js"></script>
-    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <title>World Clock - Shanice Solomon</title>
   </head>
   <body>
-    <p>
-      <select name="city" id="cities">
-        <option value="">Select a city</option>
-        <option value="Europe/Paris">Paris 🇫🇷</option>
-        <option value="Asia/Tokyo">Tokyo 🇯🇵</option>
-        <option value="Australia/Sydney">Sydney 🇦🇺</option>
-      </select>
-    </p>
-    <script>
-      function showDate(event) {
-        if (event.target.value.length > 0) {
-          let currentDate = moment()
-            .tz(event.target.value)
-            .format("dddd, MMMM D, YYYY h:mm A");
-
-          alert(`It is ${currentDate} in ${event.target.value}`);
-        }
-      }
-
-      let cityElement = document.querySelector("#cities");
-      cityElement.addEventListener("change", showDate);
-    </script>
+    <h1>World Clock</h1>
+    <footer>
+      This project was coded with ❤️ by Shanice Solomon and is
+      <a href="#" target="_blank"> open-sourced on GitHub</a>
+    </footer>
+    <script src="javascript/index.js"></script>
   </body>
 </html>
